@@ -1,0 +1,1 @@
+db.humalayas.inserMany(himalayas);
