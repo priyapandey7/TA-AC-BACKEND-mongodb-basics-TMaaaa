@@ -6,3 +6,5 @@ db.articles.update({_id: '1'},{$set :{title :"update with javaScript"}})
 db.articles.update({title :"update with javaScript"},{$set:{"author.name":"xyz"}})
 
 db.articles.update({title :"update with javaScript"},{$push:{tags:"node"}})
+
+db.articles.update({title: 'HTML'},{$inc :{"author.age":5}})
