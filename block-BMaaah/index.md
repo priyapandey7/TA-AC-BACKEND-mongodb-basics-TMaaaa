@@ -3,7 +3,9 @@ writeCode
 Write code to execute below expressions.
 
 1. Create a database named `blog`.
+  <!-- use blog -->
 2. Create a collection called 'articles'.
+<!-- db.createCollection('articles') -->
 3. Insert multiple documents(at least 3) into articles. It should have fields
 
 - title as string
@@ -33,18 +35,30 @@ Write code to execute below expressions.
 ```
 
 4. Find all the articles using `db.COLLECTION_NAME.find()`
+<!-- db.articles.find() /
+db.articles.find({}) / 
+db.articles.find().pretty()-->
 5. Find a document using \_id field.
+<!-- db.articles.find({ _id: '1'}) -->
+
 6. 1. Find documents using title
+<!-- db.articles.find({  title: 'HTML'}) -->
 7. 2. Find documents using author's name field.
+<!-- db.articles.findOne({"author.name":'Dwight Merriman'}) -->
 8. Find document using a specific tag.
 
 9. Update title of a document using its \_id field.
+<!-- db.articles.update({_id: '1'},{$set :{title :"update with javaScript"}}) -->
+
 10. Update a author's name using article's title.
+
 11. rename details field to description from all articles in articles collection.
+<!-- db.articles.update({"title ":"update with javaScript"},{$set:{"author.name":"xyz"}}) -->
 12. Add additional tag in a specific document.
 
 13. Update an article's title using $set and without $set.
-
+<!-- db.articles.update({"title ":"update with javaScript"},{$set:{"author.name":"xyz"}}) -->
+<!-- db.articles.find({title :"update with javaScript"}) -->
 - Write the differences here ?
 
 13. find an article using title and increment it's auhtor's age by 5.
