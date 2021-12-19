@@ -38,6 +38,7 @@ Go to `https://www.json-generator.com/`
     tags: ["{{repeat(2)}}", '{{lorem(1, "words")}}'],
   },
 ];
+
 ```
 
 - download it on `Desktop`
